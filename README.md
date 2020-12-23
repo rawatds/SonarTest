@@ -67,5 +67,14 @@ $ mvn clean packge sonar:sonar
 [INFO] ANALYSIS SUCCESSFUL, you can browse http://localhost:9000/dashboard?id=com.dsr.sonarcube%3Asonartest
 ```
 
+__Note:__
+
+- You can also use another pom2.xml, where there is no plugin section, but the **&lt;dependency&gt;** section for **sonar-maven-plugin**. In this case, you can run the following command:
+
+
+```sh
+clean org.jacoco:jacoco-maven-plugin:prepare-agent  org.jacoco:jacoco-maven-plugin:report package sonar:sonar
+```
+
 ### License
 **Free Software, Hell Yeah!**

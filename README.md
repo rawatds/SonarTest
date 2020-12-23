@@ -1,4 +1,4 @@
-## Steps to use SonarCube in your project
+## Steps to use SonarQube in your project
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
@@ -60,7 +60,7 @@
 - Once done, run the following command at command prompt:
 
 ```sh
-$ mvn clean packge sonar:sonar
+$ mvn clean package sonar:sonar
 ```
 - It will also display the url where we can find the coverage and other reports 
 ```sh
@@ -75,6 +75,8 @@ __Note:__
 ```sh
 mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent  org.jacoco:jacoco-maven-plugin:report package sonar:sonar
 ```
+
+- Its not advisable to put the SonarQube login credentials in the pom.xml file. Its better to create a token and pass that as a parameter to 'mvn' command.
 
 ### License
 **Free Software, Hell Yeah!**

@@ -73,7 +73,7 @@ __Note:__
 
 
 ```sh
-clean org.jacoco:jacoco-maven-plugin:prepare-agent  org.jacoco:jacoco-maven-plugin:report package sonar:sonar
+mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent  org.jacoco:jacoco-maven-plugin:report package sonar:sonar
 ```
 
 ### License

@@ -1,0 +1,86 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.dsr.sonarcube</groupId>
+	<artifactId>sonartest</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+
+	<properties>
+
+		<sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
+		<sonar.language>xml</sonar.language>
+
+		<!-- <sonar.sources>${project.basedir}/src/</sonar.sources> -->
+		<!-- <sonar.java.binaries>${project.basedir}/target/</sonar.java.binaries> -->
+
+		<sonar-maven-plugin.version>3.7.0.1746</sonar-maven-plugin.version>
+
+		<sonar.host.url>http://localhost:9000</sonar.host.url>
+
+
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+
+		<sonar.login>admin</sonar.login>
+		<sonar.password>password</sonar.password>
+
+
+	</properties>
+
+	<dependencies>
+
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+
+			<plugin>
+				<groupId>org.sonarsource.scanner.maven</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>3.7.0.1746</version>
+			</plugin>
+
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.6</version>
+				<executions>
+					<execution>
+						<id>coverage-initialize</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>coverage-report</id>
+						<phase>test</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+
+			</plugin>
+
+		</plugins>
+
+
+	</build>
+
+
+
+	<!-- <executions> <execution> <id>coverage-initialize</id> <goals> <goal>prepare-agent</goal> 
+		</goals> </execution> <execution> <id>coverage-report</id> <phase>test</phase> 
+		<goals> <goal>report</goal> </goals> </execution> </executions> -->
+
+
+</project>

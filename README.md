@@ -76,7 +76,7 @@ __Note:__
 mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent  org.jacoco:jacoco-maven-plugin:report package sonar:sonar
 ```
 
-- Its not advisable to put the SonarQube login credentials in the pom.xml file. Its better to create a token and pass that as a parameter to 'mvn' command.
+- *** Its not advisable to put the SonarQube login credentials in the pom.xml file. Its better to create a token in SonarQube and pass that as a parameter to 'mvn' command, or put in some environment variable.
 
 ### License
 **Free Software, Hell Yeah!**
